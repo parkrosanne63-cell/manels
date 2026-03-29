@@ -30,12 +30,17 @@
         background-image: url(panda-hero.jfif);
         background-size: cover;
         background-position: center;
+        box-shadow: #111;
+        padding: 10px;
+        min-height: 100vh;
       }
       .nav {
         display: flex;
         align-items: center;
-        gap: 570px;
+        gap: 610px;
         list-style: none;
+        margin: 100px;
+        padding: 20px;
       }
       .i {
         border-color: #333;
@@ -116,21 +121,29 @@
         font-weight: 600;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-      }
-
-      .title {
-        font-size: 100px;
-        color: #ffffff;
+        margin: 100px;
+        margin-bottom: 24px; /* ← just a small gap below */
 
       }
+
       .green {
         color: #80a740;
-        font-style: italic;   
+        font-style: italic; 
+       
       }
-      .tlkak{
-        color: #d4d4d4;
-        font-size: 30px;
-      }
+      .title {
+          font-size: 100px;
+          color: #ffffff;
+          margin: 100px;           /* ← remove the 150px */
+          margin-bottom: 16px; /* ← just a small gap below */
+}
+
+      .tlkak {
+             color: #d4d4d4;
+             font-size: 30px;
+             margin: 100px;           /* ← remove the 150px */
+             margin-bottom: 24px; /* ← just a small gap below */
+}
       .btn3 {
         display: inline-flex;
         align-items: center;
@@ -154,11 +167,12 @@
         color: var(--text);
         font-weight: 400;
         size: 100px;
+        margin: 100px;
       }
       .btn3s {
         display: inline-flex;
         align-items: center;
-        gap: 7px;
+        gap: 4px;
         background: transparent;
         color: white;
         font-family: "DM Sans", sans-serif;
@@ -174,13 +188,14 @@
           background 0.18s ease,
           transform 0.14s ease,
           box-shadow 0.18s ease;
-        box-shadow: 0 2px 12px rgba(100, 180, 40, 0.28);
-        color: var(--text);
+        box-shadow: 0 2px 12px rgb(255, 255, 255);
+        color: var(--bamboo-light);
         font-weight: 400;
         size: 100px;
+        margin: 100px;
+        
       }
-       
-
+    
         html { 
             scroll-behavior: smooth; 
         }
@@ -199,7 +214,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0,2rem;
             
         }
 
@@ -234,7 +249,11 @@
             margin-bottom: 2.5rem;
         }
 
-        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-group { 
+            display: flex; 
+            gap: 1rem; 
+            flex-wrap: wrap; 
+        }
         .btn-primary {
             background: var(--cream);
             color: var(--ink);
@@ -649,7 +668,6 @@
     </style>
   </head>
   <body>
-    <br />
     <header>
       <section >
         <nav class="nav" id="nav">
