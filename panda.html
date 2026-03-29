@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>idk</title>
+    <title>Panda</title>
     <style>
       :root {
         --bg: #ffffff;
@@ -16,36 +16,49 @@
         --bamboo-glow: #94b85c;
         --white: #ffffff;
         --shadow-hero: 0 24px 64px -12px rgba(20, 40, 20, 0.4);
-      } 
-      * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-      
-      body {
-        
       }
-      header{
-        background-image: url(panda-hero.jfif);
-        background-size: cover;
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background-color: var(--cream);
+        color: var(--ink);
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, .font-display {
+        font-family: 'Playfair Display', serif;
+      }
+
+      /* ── HEADER ── */
+      header {
+        background-image: linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,20)),url(panda-hero.jfif);
+        background-size: cover; 
         background-position: center;
-        box-shadow: #111;
-        padding: 10px;
         min-height: 100vh;
       }
+
+      /* ── NAV ── */
       .nav {
         display: flex;
         align-items: center;
-        gap: 610px;
+        justify-content: space-between;
         list-style: none;
-        margin: 100px;
-        padding: 20px;
+        margin: 0;
+        padding: 20px 60px;
       }
+
       .i {
-        border-color: #333;
         border-radius: 999px;
-        background-size: auto;
         background-color: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(20px);
         padding: 8px 18px 12px 20px;
@@ -53,15 +66,13 @@
       }
 
       .nav a {
-        color: var(--text);
+        color: white;
         text-decoration: none;
         font-size: 16px;
         font-weight: 400;
         padding: 8px 18px;
         border-radius: 999px;
-        transition:
-          background 0.18s ease,
-          color 0.18s ease;
+        transition: background 0.18s ease, color 0.18s ease;
         white-space: nowrap;
       }
 
@@ -73,13 +84,14 @@
         background: rgba(255, 255, 255, 0.12);
       }
 
+      /* ── BUTTONS ── */
       .btn {
         display: inline-flex;
         align-items: center;
         gap: 7px;
         background: #7ab648;
         color: #1a2a0a;
-        font-family: "DM Sans", sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 14px;
         font-weight: 600;
         padding: 10px 22px;
@@ -88,14 +100,10 @@
         cursor: pointer;
         text-decoration: none;
         white-space: nowrap;
-        transition:
-          background 0.18s ease,
-          transform 0.14s ease,
-          box-shadow 0.18s ease;
+        transition: background 0.18s ease, transform 0.14s ease, box-shadow 0.18s ease;
         box-shadow: 0 2px 12px rgba(100, 180, 40, 0.28);
-        color: var(--text);
-        font-weight: 400;
       }
+
       .btn:hover {
         background: #8dcf53;
         transform: translateY(-1px);
@@ -121,787 +129,629 @@
         font-weight: 600;
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        margin: 100px;
-        margin-bottom: 24px; /* ← just a small gap below */
+        margin: 0 0 16px 60px;
+      }
 
+      .title {
+        font-size: 100px;
+        color: #ffffff;
+        margin: 0 0 16px 60px;
       }
 
       .green {
         color: #80a740;
-        font-style: italic; 
-       
+        font-style: italic;
       }
-      .title {
-          font-size: 100px;
-          color: #ffffff;
-          margin: 100px;           /* ← remove the 150px */
-          margin-bottom: 16px; /* ← just a small gap below */
-}
 
       .tlkak {
-             color: #d4d4d4;
-             font-size: 30px;
-             margin: 100px;           /* ← remove the 150px */
-             margin-bottom: 24px; /* ← just a small gap below */
-}
+        color: #d4d4d4;
+        font-size: 30px;
+        margin: 0 0 24px 60px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 12px;
+        margin-left: 60px;
+        margin-top: 8px;
+      }
+
       .btn3 {
         display: inline-flex;
         align-items: center;
         gap: 7px;
         background: white;
         color: black;
-        font-family: "DM Sans", sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 14px;
         font-weight: 600;
-        padding: 10px 22px;
+        padding: 14px 32px;
         border-radius: 999px;
         border: none;
         cursor: pointer;
         text-decoration: none;
         white-space: nowrap;
-        transition:
-          background 0.18s ease,
-          transform 0.14s ease,
-          box-shadow 0.18s ease;
+        transition: background 0.18s ease, transform 0.14s ease, box-shadow 0.18s ease;
         box-shadow: 0 2px 12px rgba(100, 180, 40, 0.28);
-        color: var(--text);
-        font-weight: 400;
-        size: 100px;
-        margin: 100px;
+        margin: 0;
       }
+
       .btn3s {
         display: inline-flex;
         align-items: center;
-        gap: 4px;
+        gap: 7px;
         background: transparent;
         color: white;
-        font-family: "DM Sans", sans-serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 14px;
         font-weight: 600;
-        padding: 10px 22px;
+        padding: 14px 32px;
         border-radius: 999px;
-        border-color: white;
+        border: 1px solid white;
         cursor: pointer;
         text-decoration: none;
         white-space: nowrap;
-        transition:
-          background 0.18s ease,
-          transform 0.14s ease,
-          box-shadow 0.18s ease;
-        box-shadow: 0 2px 12px rgb(255, 255, 255);
-        color: var(--bamboo-light);
-        font-weight: 400;
-        size: 100px;
-        margin: 100px;
-        
+        transition: background 0.18s ease, transform 0.14s ease;
+        margin: 0;
       }
-    
-        html { 
-            scroll-behavior: smooth; 
-        }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background-color: var(--cream);
-            color: var(--ink);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, .font-display { 
-            font-family: 'Playfair Display', serif; 
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0,2rem;
-            
-        }
-
-        .tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(148, 184, 92, 0.2);
-            border: 1px solid rgba(148, 184, 92, 0.3);
-            padding: 0.4rem 1rem;
-            border-radius: 999px;
-            color: var(--bamboo-glow);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 {
-            color: var(--cream);
-            font-size: clamp(3.5rem, 10vw, 7rem);
-            line-height: 0.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 em { color: var(--bamboo-glow); }
-
-        .hero p {
-            color: rgba(247, 246, 242, 0.7);
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin-bottom: 2.5rem;
-        }
-
-        .btn-group { 
-            display: flex; 
-            gap: 1rem; 
-            flex-wrap: wrap; 
-        }
-        .btn-primary {
-            background: var(--cream);
-            color: var(--ink);
-            padding: 1.2rem 2.5rem;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .btn-outline {
-            border: 1px solid rgba(247, 246, 242, 0.3);
-            color: var(--cream);
-            padding: 1.2rem 2.5rem;
-            border-radius: 999px;
-            text-decoration: none;
-            backdrop-filter: blur(4px);
-        }
-
-        /* Sections */
-        section { padding: 8rem 0; }
-        .bg-dark { background: var(--ink); color: var(--cream); }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item h3 { font-size: 3.5rem; color: var(--bamboo-glow); margin: 0.5rem 0; }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-image {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: 2rem;
-            box-shadow: var(--shadow-hero);
-        }
-
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .fact-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            transition: 0.3s;
-        }
-
-        .fact-card:hover { border-color: var(--bamboo-glow); transform: translateY(-5px); }
-
-        /* Animations */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: 0.8s ease-out;
-        }
-
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
-        }
-        .habitat-section {
-  background: #eef2ee;
-  padding: 80px 60px;
-}
-
-.habitat-content {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ── Left text ── */
-.habitat-text { flex: 1; }
-
-.habitat-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #6b8f6b;
-  display: block;
-  margin-bottom: 12px;
-}
-
-.habitat-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  line-height: 1.1;
-  color: #1a2a1a;
-  margin-bottom: 20px;
-}
-
-.habitat-title em {
-  color: #2d6a4f;
-  font-style: italic;
-}
-
-.habitat-desc {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
-  max-width: 420px;
-  margin-bottom: 30px;
-}
-
-/* ── Bars ── */
-.habitat-bars { margin-bottom: 28px; }
-
-.bar-item { margin-bottom: 14px; }
-
-.bar-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  color: #444;
-  margin-bottom: 5px;
-}
-
-.bar-track {
-  width: 100%;
-  height: 4px;
-  background: rgba(0,0,0,0.1);
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.bar-fill {
-  height: 100%;
-  background: #2d6a4f;
-  border-radius: 999px;
-  transition: width 1s ease;
-}
-
-/* ── Tags ── */
-.habitat-tags {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.htag {
-  font-size: 12px;
-  color: #444;
-  border: 1px solid #c5d5c5;
-  border-radius: 999px;
-  padding: 6px 14px;
-  background: transparent;
-}
-
-/* ── Image ── */
-.habitat-img-wrap { flex: 1; }
-
-.habitat-img {
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 2rem;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-  display: block;
-}
-.gallery-section {
-  background: #111;
-  padding: 60px 40px;
-}
-
-.gallery-header {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.gallery-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #7ab648;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.gallery-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #ffffff;
-  font-weight: 600;
-}
-
-/* ── Grid layout ── */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 12px;
-  max-width: 860px;
-  margin: 0 auto;
-}
-
-.g-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
-  display: block;
-}
-
-/* Top-left: tall wide image */
-.g-img:nth-child(1) {
-  grid-column: 1;
-  grid-row: 1;
-  aspect-ratio: 4/3;
-}
-
-/* Top-right: smaller portrait */
-.g-img:nth-child(2) {
-  grid-column: 2;
-  grid-row: 1;
-  aspect-ratio: 4/3;
-}
-
-/* Bottom-left: small */
-.g-img:nth-child(3) {
-  grid-column: 1;
-  grid-row: 2;
-  aspect-ratio: 4/3;
-}
-
-/* Bottom-right: wide */
-.g-img:nth-child(4) {
-  grid-column: 2;
-  grid-row: 2;
-  aspect-ratio: 4/3;
-}
-.conservation-section {
-  background: #eef2ee;
-  padding: 80px 40px;
-}
-
-/* ── Header ── */
-.conservation-header {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto 50px;
-}
-
-.cons-label {
-  display: block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #6b8f6b;
-  margin-bottom: 12px;
-}
-
-.cons-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #1a2a1a;
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
-.cons-title em {
-  color: #2d6a4f;
-  font-style: italic;
-}
-
-.cons-desc {
-  font-size: 0.97rem;
-  color: #555;
-  line-height: 1.75;
-}
-
-/* ── Cards ── */
-.cons-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.cons-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 32px 28px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-}
-
-.cons-icon {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
-}
-
-.cons-stat {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #2d6a4f;
-  margin-bottom: 6px;
-}
-
-.cons-card h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-}
-
-.cons-card p {
-  font-size: 0.88rem;
-  color: #666;
-  line-height: 1.7;
-}
-.cta-section {
-  background: #eef2ee;
-  padding: 40px;
-}
-
-.cta-box {
-  max-width: 860px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #2d6a4f 0%, #3a8c5c 50%, #a8c5a0 100%);
-  border-radius: 24px;
-  padding: 50px 40px;
-  text-align: center;
-}
-
-.cta-icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-}
-
-.cta-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 16px;
-}
-
-.cta-desc {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
-  max-width: 420px;
-  margin: 0 auto 30px;
-}
-
-.cta-btns {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.cta-btn-primary {
-  background: #ffffff;
-  color: #1a2a1a;
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 12px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: background 0.18s ease, transform 0.14s ease;
-}
-
-.cta-btn-primary:hover {
-  background: #f0f0f0;
-  transform: translateY(-1px);
-}
-
-.cta-btn-secondary {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 12px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: background 0.18s ease, transform 0.14s ease;
-}
-
-.cta-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-1px);
-}
 
+      /* ── CONTAINER ── */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* ── SECTIONS ── */
+      section { padding: 8rem 0; }
+      .bg-dark { background: var(--ink); color: var(--cream); }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .stat-item h3 { font-size: 3.5rem; color: var(--bamboo-glow); margin: 0.5rem 0; }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .about-image {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 2rem;
+        box-shadow: var(--shadow-hero);
+      }
+
+      .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .fact-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.1);
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        transition: 0.3s;
+      }
+
+      .fact-card:hover { border-color: var(--bamboo-glow); transform: translateY(-5px); }
+
+      /* ── ANIMATIONS ── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.8s ease-out;
+      }
+
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── HABITAT ── */
+      .habitat-section { background: #eef2ee; padding: 80px 60px; }
+
+      .habitat-content {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .habitat-text { flex: 1; }
+
+      .habitat-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #6b8f6b;
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .habitat-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        line-height: 1.1;
+        color: #1a2a1a;
+        margin-bottom: 20px;
+      }
+
+      .habitat-title em { color: #2d6a4f; font-style: italic; }
+
+      .habitat-desc {
+        font-size: 0.95rem;
+        color: #555;
+        line-height: 1.7;
+        max-width: 420px;
+        margin-bottom: 30px;
+      }
+
+      .habitat-bars { margin-bottom: 28px; }
+      .bar-item { margin-bottom: 14px; }
+
+      .bar-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #444;
+        margin-bottom: 5px;
+      }
+
+      .bar-track {
+        width: 100%;
+        height: 4px;
+        background: rgba(0,0,0,0.1);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .bar-fill {
+        height: 100%;
+        background: #2d6a4f;
+        border-radius: 999px;
+        transition: width 1s ease;
+      }
+
+      .habitat-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+
+      .htag {
+        font-size: 12px;
+        color: #444;
+        border: 1px solid #c5d5c5;
+        border-radius: 999px;
+        padding: 6px 14px;
+        background: transparent;
+      }
+
+      .habitat-img-wrap { flex: 1; }
+
+      .habitat-img {
+        width: 100%;
+        max-width: 420px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 2rem;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        display: block;
+      }
+
+      /* ── GALLERY ── */
+      .gallery-section { background: #111; padding: 60px 40px; }
+
+      .gallery-header { text-align: center; margin-bottom: 32px; }
+
+      .gallery-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #7ab648;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .gallery-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 12px;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+
+      .g-img-wrap {
+        overflow: hidden;
+        border-radius: 14px;
+        display: block;
+      }
+
+      .g-img-wrap:nth-child(1) { grid-column: 1; grid-row: 1; aspect-ratio: 4/3; }
+      .g-img-wrap:nth-child(2) { grid-column: 2; grid-row: 1; aspect-ratio: 4/3; }
+      .g-img-wrap:nth-child(3) { grid-column: 1; grid-row: 2; aspect-ratio: 4/3; }
+      .g-img-wrap:nth-child(4) { grid-column: 2; grid-row: 2; aspect-ratio: 4/3; }
+
+      .g-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 14px;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      .g-img-wrap:hover .g-img {
+        transform: scale(1.08);
+      }
+
+      /* ── CONSERVATION ── */
+      .conservation-section { background: #eef2ee; padding: 80px 40px; }
+
+      .conservation-header {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 50px;
+      }
+
+      .cons-label {
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6b8f6b;
+        margin-bottom: 12px;
+      }
+
+      .cons-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        color: #1a2a1a;
+        line-height: 1.15;
+        margin-bottom: 20px;
+      }
+
+      .cons-title em { color: #2d6a4f; font-style: italic; }
+      .cons-desc { font-size: 0.97rem; color: #555; line-height: 1.75; }
+
+      .cons-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .cons-card {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 32px 28px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      }
+
+      .cons-icon { font-size: 1.8rem; margin-bottom: 16px; }
+
+      .cons-stat {
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #2d6a4f;
+        margin-bottom: 6px;
+      }
+
+      .cons-card h3 { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; }
+      .cons-card p { font-size: 0.88rem; color: #666; line-height: 1.7; }
+
+      /* ── CTA ── */
+      .cta-section { background: #eef2ee; padding: 40px; }
+
+      .cta-box {
+        max-width: 860px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #2d6a4f 0%, #3a8c5c 50%, #a8c5a0 100%);
+        border-radius: 24px;
+        padding: 50px 40px;
+        text-align: center;
+      }
+
+      .cta-icon { font-size: 2.5rem; margin-bottom: 16px; }
+
+      .cta-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+
+      .cta-desc {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.7;
+        max-width: 420px;
+        margin: 0 auto 30px;
+      }
+
+      .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+      .cta-btn-primary {
+        background: #ffffff;
+        color: #1a2a1a;
+        font-size: 0.95rem;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+        transition: background 0.18s ease, transform 0.14s ease;
+      }
+
+      .cta-btn-primary:hover { background: #f0f0f0; transform: translateY(-1px); }
+
+      .cta-btn-secondary {
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 12px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: background 0.18s ease, transform 0.14s ease;
+      }
+
+      .cta-btn-secondary:hover { background: rgba(255, 255, 255, 0.25); transform: translateY(-1px); }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 768px) {
+        .about-grid { grid-template-columns: 1fr; }
+        .nav { gap: 0; padding: 16px 20px; }
+        .title { font-size: 60px; margin-left: 20px; }
+        .tlkak { font-size: 18px; margin-left: 20px; }
+        .btn2 { margin-left: 20px; }
+        .buttons { margin-left: 20px; }
+        .cons-cards { grid-template-columns: 1fr; }
+        .habitat-content { flex-direction: column; }
+      }
     </style>
   </head>
   <body>
     <header>
-      <section >
+      <section style="padding: 12px 0;">
         <nav class="nav" id="nav">
           <div class="i">
-           <a href="panda.html">🐼 Panda</a>
-           <a href="panda.html">Home</a>        <!-- links to the page itself -->
-           <a href="#About">About</a>           <!-- scrolls to #about on same page -->
-           <a href="panda.html#Habitat">Habitat</a>
-           <a href="panda.html#Behavior">Behavior</a>
-           <a href="panda.html#Conservation">Conservation</a>
-         </div>
+            <a href="panda.html">🐼 Panda</a>
+            <a href="panda.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#habitat">Habitat</a>
+            <a href="#behavior">Behavior</a>
+            <a href="#conservation">Conservation</a>
+          </div>
           <div class="s">
-            <a href="support coonservation.html" class="btn"
-              >Support conservation</a
-            >
+            <a href="support conservation.html" class="btn">Support conservation</a>
           </div>
         </nav>
       </section>
-    <br>
-    <a href="support coonservation.html" class="btn2">• Vulnerable Species</a>
-    <h1 class="title">The Giant <br /><span class="green">Panda.</span></h1>
-    <p class="tlkak">A symbol of peace and conservation. Discover the fascinating <br> world of <b><i>Ailuropoda melanoleuca</i></b> — the bear that captured <br>humanity's heart.</p>
-    <section class="buttons">
-    <a href="panda.html#About" class="btn3"><b>Discover more</b></a>
-    <a href="panda.html#View Gallery" class="btn3s"><b>View Gallery</b></a>
-    </section>
+
+      <a href="support conservation.html" class="btn2">• Vulnerable Species</a>
+      <h1 class="title">The Giant <br /><span class="green">Panda.</span></h1>
+      <p class="tlkak">A symbol of peace and conservation. Discover the fascinating <br>
+        world of <b><i>Ailuropoda melanoleuca</i></b> — the bear that captured <br>
+        humanity's heart.</p>
+      <div class="buttons">
+        <a href="#about" class="btn3"><b>Discover more</b></a>
+        <a href="#gallery" class="btn3s"><b>View Gallery</b></a>
+      </div>
     </header>
-    <footer>
+
     <section class="bg-dark">
-        <div class="container stats-grid">
-            <div class="stat-item fade-up">
-                <div>🌿</div>
-                <h3>1,864</h3>
-                <p>Pandas in the Wild</p>
-            </div>
-            <div class="stat-item fade-up">
-                <div>🎋</div>
-                <h3>99%</h3>
-                <p>Diet is Bamboo</p>
-            </div>
-            <div class="stat-item fade-up">
-                <div>⚖️</div>
-                <h3>150 kg</h3>
-                <p>Max Adult Weight</p>
-            </div>
-            <div class="stat-item fade-up">
-                <div>🕰️</div>
-                <h3>20 yrs</h3>
-                <p>Lifespan</p>
-            </div>
+      <div class="container stats-grid">
+        <div class="stat-item fade-up">
+          <div>🌿</div>
+          <h3>1,864</h3>
+          <p>Pandas in the Wild</p>
         </div>
+        <div class="stat-item fade-up">
+          <div>🎋</div>
+          <h3>99%</h3>
+          <p>Diet is Bamboo</p>
+        </div>
+        <div class="stat-item fade-up">
+          <div>⚖️</div>
+          <h3>150 kg</h3>
+          <p>Max Adult Weight</p>
+        </div>
+        <div class="stat-item fade-up">
+          <div>🕰️</div>
+          <h3>20 yrs</h3>
+          <p>Lifespan</p>
+        </div>
+      </div>
     </section>
-</footer>    
-<section id="about" class="container">
-        <div class="about-grid">
-            <img class="about-image fade-up" src="portrait.jfif" alt="Panda Portrait">
-            <div class="fade-up">
-                <span style="color:var(--bamboo); font-weight:bold; text-transform:uppercase; font-size:0.8rem;">About the Giant Panda</span>
-                <h2 style="font-size:3.5rem; margin: 1rem 0;">Nature's Most <br><em style="color:var(--bamboo)">Beloved Bear</em></h2>
-                <p style="color:#666; font-size:1.1rem; margin-bottom:1.5rem;">The giant panda is a bear native to South Central China. Despite their bear classification, they are renowned for their gentle, solitary nature and their near-exclusive bamboo diet.</p>
-                <p style="color:#666; font-size:1.1rem;">Recognized by their distinctive black-and-white coat, giant pandas have become one of the world's most iconic animals and a global symbol for wildlife conservation.</p>
-            </div>
+
+    <section id="about" class="container">
+      <div class="about-grid">
+        <img class="about-image fade-up" src="portrait.jfif" alt="Panda Portrait">
+        <div class="fade-up">
+          <span style="color:var(--bamboo); font-weight:bold; text-transform:uppercase; font-size:0.8rem;">About the Giant Panda</span>
+          <h2 style="font-size:3.5rem; margin: 1rem 0;">Nature's Most <br><em style="color:var(--bamboo)">Beloved Bear</em></h2>
+          <p style="color:#666; font-size:1.1rem; margin-bottom:1.5rem;">The giant panda is a bear native to South Central China. Despite their bear classification, they are renowned for their gentle, solitary nature and their near-exclusive bamboo diet.</p>
+          <p style="color:#666; font-size:1.1rem;">Recognized by their distinctive black-and-white coat, giant pandas have become one of the world's most iconic animals and a global symbol for wildlife conservation.</p>
         </div>
+      </div>
     </section>
 
     <section id="behavior" class="bg-dark">
-        <div class="container">
-            <div style="text-align:center; margin-bottom:4rem;" class="fade-up">
-                <span style="color:var(--bamboo-glow); font-weight:bold; text-transform:uppercase;">Behavior & Biology</span>
-                <h2 style="font-size:3.5rem;">Life of a Panda</h2>
-            </div>
-            <div class="grid-cards">
-                <div class="fact-card fade-up">
-                    <div style="font-size:2rem; margin-bottom:1rem;">🎋</div>
-                    <h3>Bamboo Devotion</h3>
-                    <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Pandas spend 10–16 hours per day eating, consuming 12–38 kg of bamboo daily. Their pseudo-thumb helps them grasp stalks.</p>
-                </div>
-                <div class="fact-card fade-up">
-                    <div style="font-size:2rem; margin-bottom:1rem;">🐣</div>
-                    <h3>Tiny Cubs</h3>
-                    <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Newborn panda cubs weigh only 100–200g — about 1/900th of their mother's size, the smallest relative to mother mammals.</p>
-                </div>
-                <div class="fact-card fade-up">
-                    <div style="font-size:2rem; margin-bottom:1rem;">🏔️</div>
-                    <h3>Mountain Climbers</h3>
-                    <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Wild pandas live in mountainous forests at high elevations. They are strong swimmers and excellent climbers.</p>
-                </div>
-                <div class="fact-card fade-up">
-                    <div style="font-size:2rem; margin-bottom:1rem;">🌙</div>
-                    <h3>Solitary Creatures</h3>
-                    <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Giant pandas are largely solitary animals, each establishing a home range in the mountains. They communicate via scent marks, scratches on trees, and vocalizations to avoid direct encounters.</p>
-                </div>
-                <div class="fact-card fade-up">
-                    <div style="font-size:2rem; margin-bottom:1rem;">🎵</div>
-                    <h3>Mountain Climbers</h3>
-                    <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Pandas communicate through a repertoire of about 11 distinct vocalizations, including bleating, honking, and a unique "moan" used during mating season.</p>
-                </div>
-                <div class="fact-card fade-up">
-                    <div style="font-size:2rem; margin-bottom:1rem;">💤</div>
-                    <h3>Mountain Climbers</h3>
-                    <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Unlike other bears, giant pandas do not hibernate. Their low-nutrition bamboo diet means they must eat year-round and rest frequently between long eating sessions.</p>
-            </div>
+      <div class="container">
+        <div style="text-align:center; margin-bottom:4rem;" class="fade-up">
+          <span style="color:var(--bamboo-glow); font-weight:bold; text-transform:uppercase;">Behavior & Biology</span>
+          <h2 style="font-size:3.5rem;">Life of a Panda</h2>
         </div>
+        <div class="grid-cards">
+          <div class="fact-card fade-up">
+            <div style="font-size:2rem; margin-bottom:1rem;">🎋</div>
+            <h3>Bamboo Devotion</h3>
+            <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Pandas spend 10–16 hours per day eating, consuming 12–38 kg of bamboo daily. Their pseudo-thumb helps them grasp stalks.</p>
+          </div>
+          <div class="fact-card fade-up">
+            <div style="font-size:2rem; margin-bottom:1rem;">🐣</div>
+            <h3>Tiny Cubs</h3>
+            <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Newborn panda cubs weigh only 100–200g — about 1/900th of their mother's size, the smallest relative to mother mammals.</p>
+          </div>
+          <div class="fact-card fade-up">
+            <div style="font-size:2rem; margin-bottom:1rem;">🏔️</div>
+            <h3>Mountain Climbers</h3>
+            <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Wild pandas live in mountainous forests at high elevations. They are strong swimmers and excellent climbers.</p>
+          </div>
+          <div class="fact-card fade-up">
+            <div style="font-size:2rem; margin-bottom:1rem;">🌙</div>
+            <h3>Solitary Creatures</h3>
+            <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Giant pandas are largely solitary animals, each establishing a home range in the mountains. They communicate via scent marks, scratches on trees, and vocalizations to avoid direct encounters.</p>
+          </div>
+          <div class="fact-card fade-up">
+            <div style="font-size:2rem; margin-bottom:1rem;">🎵</div>
+            <h3>Vocal Communication</h3>
+            <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Pandas communicate through a repertoire of about 11 distinct vocalizations, including bleating, honking, and a unique "moan" used during mating season.</p>
+          </div>
+          <div class="fact-card fade-up">
+            <div style="font-size:2rem; margin-bottom:1rem;">💤</div>
+            <h3>No Hibernation</h3>
+            <p style="color:rgba(255,255,255,0.5); margin-top:1rem;">Unlike other bears, giant pandas do not hibernate. Their low-nutrition bamboo diet means they must eat year-round and rest frequently between long eating sessions.</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="habitat-section">
-  <div class="habitat-content">
 
-    <div class="habitat-text">
-      <span class="habitat-label">WHERE THEY LIVE</span>
-      <h2 class="habitat-title">The Misty<br><em>Bamboo Forests</em></h2>
-      <p class="habitat-desc">
-        Giant pandas live in the mountain ranges of central China — primarily in Sichuan
-        province, with smaller populations in Shaanxi and Gansu. These cool, wet
-        bamboo forests provide everything a panda needs.
-      </p>
-
-      <!-- Progress bars -->
-      <div class="habitat-bars">
-        <div class="bar-item">
-          <div class="bar-label"><span>Sichuan Province</span><span>~80%</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+    <section id="habitat" class="habitat-section">
+      <div class="habitat-content">
+        <div class="habitat-text">
+          <span class="habitat-label">WHERE THEY LIVE</span>
+          <h2 class="habitat-title">The Misty<br><em>Bamboo Forests</em></h2>
+          <p class="habitat-desc">
+            Giant pandas live in the mountain ranges of central China — primarily in Sichuan
+            province, with smaller populations in Shaanxi and Gansu. These cool, wet
+            bamboo forests provide everything a panda needs.
+          </p>
+          <div class="habitat-bars">
+            <div class="bar-item">
+              <div class="bar-label"><span>Sichuan Province</span><span>~80%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label"><span>Shaanxi Province</span><span>~11%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:11%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label"><span>Gansu Province</span><span>~8%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:8%"></div></div>
+            </div>
+          </div>
+          <div class="habitat-tags">
+            <span class="htag">Elevation: 1,200–3,100m</span>
+            <span class="htag">Temperature: 2–14°C</span>
+            <span class="htag">26 Nature Reserves</span>
+          </div>
         </div>
-        <div class="bar-item">
-          <div class="bar-label"><span>Shaanxi Province</span><span>~11%</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:11%"></div></div>
-        </div>
-        <div class="bar-item">
-          <div class="bar-label"><span>Gansu Province</span><span>~8%</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:8%"></div></div>
+        <div class="habitat-img-wrap">
+          <img src="eating.jfif" alt="Panda in bamboo forest" class="habitat-img">
         </div>
       </div>
+    </section>
 
-      <!-- Tags -->
-      <div class="habitat-tags">
-        <span class="htag">Elevation: 1,200–3,100m</span>
-        <span class="htag">Temperature: 2–14°C</span>
-        <span class="htag">26 Nature Reserves</span>
+    <section id="gallery" class="gallery-section">
+      <div class="gallery-header">
+        <span class="gallery-label">PHOTO GALLERY</span>
+        <h2 class="gallery-title">In Their Element</h2>
       </div>
-    </div>
+      <div class="gallery-grid">
+        <div class="g-img-wrap"><img src="ressources/panda-hero.jpg" alt="Panda in bamboo" class="g-img"></div>
+        <div class="g-img-wrap"><img src="eating.jfif" alt="Panda eating" class="g-img"></div>
+        <div class="g-img-wrap"><img src="portrait.jfif" alt="Panda portrait" class="g-img"></div>
+        <div class="g-img-wrap"><img src="two panda.jfif" alt="Two pandas hugging" class="g-img"></div>
+      </div>
+    </section>
 
-    <div class="habitat-img-wrap">
-      <img src="eating.jfif" alt="Panda in bamboo forest" class="habitat-img">
-    </div>
-  </div>
-</section>
-<section class="gallery-section">
-  <div class="gallery-header">
-    <span class="gallery-label">PHOTO GALLERY</span>
-    <h2 class="gallery-title">In Their Element</h2>
-  </div>
+    <section id="conservation" class="conservation-section">
+      <div class="conservation-header">
+        <span class="cons-label">CONSERVATION STATUS</span>
+        <h2 class="cons-title">A Story of<br><em>Hope & Recovery</em></h2>
+        <p class="cons-desc">
+          In 2016, the giant panda was downlisted from "Endangered" to "Vulnerable" on the IUCN Red List — a
+          landmark conservation success fueled by decades of dedicated protection, habitat restoration, and captive breeding.
+        </p>
+      </div>
+      <div class="cons-cards">
+        <div class="cons-card">
+          <div class="cons-icon">🛡️</div>
+          <span class="cons-stat">67 Reserves</span>
+          <h3>Protected Reserves</h3>
+          <p>China has established 67 panda nature reserves, protecting 66% of the wild panda population and 53% of their habitat.</p>
+        </div>
+        <div class="cons-card">
+          <div class="cons-icon">🌱</div>
+          <span class="cons-stat">+11.8% Habitat</span>
+          <h3>Habitat Restoration</h3>
+          <p>Reforestation efforts have connected fragmented habitats, creating wildlife corridors that allow panda populations to mix and thrive.</p>
+        </div>
+        <div class="cons-card">
+          <div class="cons-icon">🐼</div>
+          <span class="cons-stat">600+ in Captivity</span>
+          <h3>Captive Breeding</h3>
+          <p>Over 600 pandas now live in captivity across China and abroad. Successful captive breeding programs have contributed to reintroduction efforts.</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="gallery-grid">
-    <img src="ressources/panda-hero.jpg" alt="Panda in bamboo" class="g-img g-large">
-    <img src="eating.jfif" alt="Panda face closeup" class="g-img g-small">
-    <img src="portrait.jfif" alt="Baby panda" class="g-img g-small">
-    <img src="two panda.jfif" alt="Two pandas hugging" class="g-img g-large">
-  </div>
-</section>
-<section class="conservation-section">
-  <div class="conservation-header">
-    <span class="cons-label">CONSERVATION STATUS</span>
-    <h2 class="cons-title">A Story of<br><em>Hope & Recovery</em></h2>
-    <p class="cons-desc">
-      In 2016, the giant panda was downlisted from "Endangered" to "Vulnerable" on the IUCN Red List — a
-      landmark conservation success fueled by decades of dedicated protection, habitat restoration, and
-      captive breeding.
-    </p>
-  </div>
+    <section class="cta-section">
+      <div class="cta-box">
+        <div class="cta-icon">🐼</div>
+        <h2 class="cta-title">Help Protect Giant Pandas</h2>
+        <p class="cta-desc">
+          Every action counts. Support WWF and the China Conservation and
+          Research Center for the Giant Panda in their mission to protect this beloved species.
+        </p>
+        <div class="cta-btns">
+          <a href="https://www.worldwildlife.org/" class="cta-btn-primary">Support WWF →</a>
+          <a href="https://en.wikipedia.org/wiki/Giant_panda" class="cta-btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
 
-  <div class="cons-cards">
-
-    <div class="cons-card">
-      <div class="cons-icon">🛡️</div>
-      <span class="cons-stat">67 Reserves</span>
-      <h3>Protected Reserves</h3>
-      <p>China has established 67 panda nature reserves, protecting 66% of the wild panda population and 53% of their habitat.</p>
-    </div>
-
-    <div class="cons-card">
-      <div class="cons-icon">🌱</div>
-      <span class="cons-stat">+11.8% Habitat</span>
-      <h3>Habitat Restoration</h3>
-      <p>Reforestation efforts have connected fragmented habitats, creating wildlife corridors that allow panda populations to mix and thrive.</p>
-    </div>
-
-    <div class="cons-card">
-      <div class="cons-icon">🐼</div>
-      <span class="cons-stat">600+ in Captivity</span>
-      <h3>Captive Breeding</h3>
-      <p>Over 600 pandas now live in captivity across China and abroad. Successful captive breeding programs have contributed to reintroduction efforts.</p>
-    </div>  
-  </div>
-
-</section>
-<section class="cta-section">
-  <div class="cta-box">
-    <div class="cta-icon">🐼</div>
-    <h2 class="cta-title">Help Protect Giant Pandas</h2>
-    <p class="cta-desc">
-      Every action counts. Support WWF and the China Conservation and
-      Research Center for the Giant Panda in their mission to protect this
-      beloved species.
-    </p>
-    <div class="cta-btns">
-      <a href="https://www.worldwildlife.org/" class="cta-btn-primary">Support WWF →</a>
-      <a href="https://en.wikipedia.org/wiki/Giant_panda" class="cta-btn-secondary">Learn More</a>
-    </div>
-  </div>
-</section>
     <footer style="background:var(--ink); padding: 4rem 0; border-top:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.4); text-align:center;">
-        <div class="container">
-            <h2 style="color:white; margin-bottom:1rem;">🐼 Panda</h2>
-            <p></p>
-            <p>© 2026 Panda World. Built for conservation awareness.</p>
-        </div>
+      <div class="container">
+        <h2 style="color:white; margin-bottom:1rem;">🐼 Panda</h2>
+        <p style="margin-bottom:0.5rem;">Built with love for one of the world's most cherished animals. Data sourced from WWF & IUCN.</p>
+        <p>© 2026 Panda World. Built for conservation awareness.</p>
+      </div>
     </footer>
 
     <script>
-        // Translation of useScrollReveal() hook
-        const observerOptions = {
-            threshold: 0.15
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-up').forEach(el => {
-            observer.observe(el);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
         });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     </script>
   </body>
 </html>
